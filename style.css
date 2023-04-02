@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+}
+
+button{
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
+
+/*==================Global Config============================*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 80px;
+    color: rgb(77, 77, 77);
+    border-bottom: 1px solid rgba(236, 236, 236, 0.432);
+}
+
+.logo img{
+    width: 100px;
+    padding-top: 10px;
+}
+
+.header-info{
+    display: flex;
+    gap:50px;
+}
+
+.dp-itens{
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    align-items: center;
+}
+
+.dp-itens li:hover, .dp-itens button:hover{
+    color: black;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.dp-itens button{
+    background-color: transparent;
+    outline: none;
+    border: none;   
+    font-size: 1rem;
+    color: rgb(77, 77, 77);
+}
+
+.header-user{
+    display: flex;
+    gap: 30px;
+}
+
+.header-user button{
+    font-size: 1rem;
+    width: 100px;
+    height: 45px;
+    border-radius: 12px;
+    background: transparent;
+    color: rgb(77, 77, 77);
+}
+
+.header-user button:hover{
+    color: black;
+    font-weight: 500;
+}
+
+#btn-login{
+    border: none;
+}
+
+#btn-register{
+    border: 2px solid black;
+}
+
+.menu{
+    width: 50px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+}
+/*===================Header Config======================*/
+.features-container{
+    height: 0px;
+    width: 160px;
+    position: absolute;
+    left: 110px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.26);
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    overflow: hidden;
+    color: rgb(104, 104, 104);
+    transition: .5s ease;
+    background-color: white;
+}
+.feat-on{
+    height: 150px;
+    padding: 10px;
+}
+
+.feat-on .features-dp li{
+    animation: dp .5s ease-in;
+}
+
+.features-dp{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.features-dp li{
+    padding-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.features-dp li img{
+    padding-right: 10px;
+}
+
+.features-dp li:hover{
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+    color: black;
+}
+
+/*===================Features Menu Config======================*/
+.company-container{
+    height: 0px;
+    width: 100px;
+    position: absolute;
+    left: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.26);
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    overflow: hidden;
+    color: rgb(104, 104, 104);
+    transition: .3s ease-in;
+    background-color: white;
+}
+
+.company-on{
+    height: 110px;
+    padding: 10px;
+}
+
+.company-dp{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.company-dp li{
+    padding-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    animation: dp ease-in .4s;
+}
+
+.company-dp li:hover{
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+    color: black;
+}
+/*====================Company Menu Config======================*/
+.features-mob{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.mob-feat-on{
+    height: 250px;
+}
+
+.mob-nav{
+    width: 200px;
+    height: 0;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.37);
+    border-radius: 0px 0px 10px 10px;
+    transition: .4s;
+}
+
+.mob-nav-on{
+    height: 800px;
+    animation: mobNav .3s ease-in;
+}
+
+#mob-feature-btn{
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.342);
+}
+
+.feature-itens{
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.feature-itens li{
+    padding: 15px;
+    border-top: 1px solid rgb(173, 173, 173);
+}
+
+.feature-itens li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*------------------------------------------------*/
+
+.Company-mob{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+#company-feature-btn{
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.342);
+}
+
+.mob-company-on{
+    height: 195px;
+}
+
+.company-itens{
+    list-style-type: none;
+}
+
+.company-itens li{
+    padding: 15px;
+    border-top: 1px solid black;
+}
+.company-itens li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*------------------------------------------------------*/
+.register-mob, .login-mob{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#register-mobile-btn{
+    width: 180px;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#register-mobile-btn:hover{
+    background-color: black;
+    color: aliceblue;
+}
+#login-mobile-btn{
+    width: 180px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+}
+#login-mobile-btn:hover{
+    font-weight: bold;
+}
+
+.btns-mob{
+    border-top: 1px solid black;
+}
+
+/*------------------------------------------------------*/
+
+#carrer-btn{
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-top: 1px solid black;
+}
+
+#about-btn{
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-top: 1px solid black;
+}
+
+#mob-feature-btn:hover, #company-feature-btn:hover, #carrer-btn:hover, #about-btn:hover{
+    background-color: rgb(201, 201, 201);
+}
+
+/*====================Mobile menu config======================*/
+
+main{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.mob{
+    display: none;
+}
+
+.hero-section{
+    height: 800px;
+    width: 700px;
+}
+
+.hero-section h1{
+    font-size: 6rem;
+}
+
+.hero-title{
+    padding-top: 130px;
+}
+
+.hero-info{
+    width: 500px;
+    padding-top: 50px;
+    font-size: 1.2rem;
+    color: rgb(133, 133, 133);
+}
+#hero-btn{
+    margin-top: 50px;
+    height: 60px;
+    width: 180px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid black;
+    color: aliceblue;
+    background-color: black;
+    transition: .5s ease;
+}
+
+#hero-btn:hover{
+    background-color: transparent;
+    color: black;
+}
+
+.clients{
+    display: flex;
+    gap: 70px;
+    padding-top: 100px;
+    width: 500px;
+}
+
+.clients img{
+    width: 90px;
+    height: 20px;
+}
+
+.clients .fix{
+    height: 30px;
+}
+
+.hero-image, .hero-image img{
+    height: 800px;
+    width: 600px;
+}
+
+/*===================Hero section config=============================*/
+
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*===================Attribution config=============================*/
+
+@keyframes dp{
+    0%{
+        opacity: 0%;
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes mobNav {
+    0%{
+        transform: translateX(200px);
+    }
+}
+
+@media (max-width: 1240px){
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 915px){
+    *{
+        overflow-x: hidden;
+    }
+    main{
+        padding: 0;
+        margin: 0;
+        gap: 50px;
+    }
+
+    header{
+        padding-left: 10px;
+        padding-right: 10px;
+        border-bottom: none;
+    }
+
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .dp-itens, .feat-on, .company-on{
+        display: none;
+    }
+
+    .desk{
+        display: none;
+    }
+
+    .mob{
+        display: block;
+    }
+    .hero-image-mob{
+        width: 100vw;
+    }
+    .hero-image-mob img{
+        height: auto;
+        width: 100%;
+    }
+    .hero-title{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding: 0;
+    }
+    .hero-title h1{
+        font-size: 2rem;
+    }
+    .hero-info{
+        padding: 0;
+        margin: auto;
+        text-align: center;
+        width: 100vw;
+    }
+    .hero-info p{
+        padding-top: 10px;  
+    }
+    .hero-section{
+        width: 100vw;
+        padding: 10px;
+        height: auto;
+    }
+    #hero-btn{
+        margin: auto;
+    }
+    .clients{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .btn-hero{
+        width: 100vw;
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .attribution{
+        padding-bottom: 30px;
+    }
+
+}
